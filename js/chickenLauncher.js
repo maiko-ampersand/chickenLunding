@@ -17,6 +17,7 @@ $(function() {
     var scene_8 = $('.scene8');
     var scene_9 = $('.scene9');
     var scene_10 = $('.scene10');
+    var scene_11 = $('.scene11');
 
     var cap1 = $('#cap1');
     var cap2 = $('#cap2');
@@ -32,6 +33,7 @@ $(function() {
     var cap12 = $('#cap12');
     var cap13 = $('#cap13');
     var cap14 = $('#cap14');
+    var cap15 = $('#cap15');
  
 
     /*========================
@@ -155,15 +157,50 @@ $(function() {
                 }, 4000);
             }, interval:1500},
             {animation:function(){
+                cap10.animate({
+                    opacity:1
+                }, 800);
+            }, interval:800},
+            {animation:function(){
+                cap11.animate({
+                    opacity:1
+                }, 800);
+            }, interval:800},
+            {animation:function(){
+                cap12.animate({
+                    opacity:1
+                }, 800);
+            }, interval:2000},
+            {animation:function(){
                 scene_7.animate({
                     opacity:0
                 }, 4000);
             }, interval:2000},
             {animation:function(){
+                scene_11.animate({
+                    opacity:1
+                }, 4000);
+            }, interval:500},
+            {animation:function(){
+                cap15.animate({
+                    opacity:1
+                }, 500);
+            }, interval:1000},
+            {animation:function(){
+                scene_11.animate({
+                    opacity:0
+                }, 4000);
+            }, interval:1500},
+            {animation:function(){
                 scene_8.animate({
                     opacity:1
                 }, 4000);
             }, interval:1500},
+            {animation:function(){
+                cap13.animate({
+                    opacity:1
+                }, 500);
+            }, interval:1000},
             {animation:function(){
                 scene_8.animate({
                     opacity:0
@@ -175,11 +212,17 @@ $(function() {
                 }, 4000);
             }, interval:1500},
             {animation:function(){
+                cap14.animate({
+                    opacity:1
+                }, 500);
+            }, interval:2000},
+            {animation:function(){
                 scene_9.animate({
                     opacity:0
                 }, 4000);
             }, interval:2000},
             {animation:function(){
+                $('#skip').remove();
                 scene_10.animate({
                     opacity:1
                 }, 4000);
@@ -193,4 +236,20 @@ $(function() {
         }
     }
     main_animation();
+
+    $('#skip').on('click',function(){
+        scene_1.remove();
+        scene_2.remove();
+        scene_3.remove();
+        scene_4.remove();
+        scene_5.remove();
+        scene_6.remove();
+        scene_7.remove();
+        scene_8.remove();
+        scene_9.remove();
+        $(this).remove();
+        scene_10.animate({
+            opacity:1
+        }, 800);
+    })    
 });

@@ -911,7 +911,6 @@ html,body {
   font-family:'Hiragino Mincho ProN', serif;
   width: 100%;
   height: 100%;
-  min-width: 1200px;
 }
 .content {
   background: url('../img/bg.png');
@@ -958,7 +957,17 @@ html,body {
 .big_size {
   font-size: 4em;
 }
-
+@media screen and (max-width : 800px){
+  .small_size {
+    font-size: 80%;
+  }
+  .middle_size {
+    font-size: 150%;
+  }
+  .big_size {
+    font-size: 200%;
+  }
+}
 
 
 .scene1 {
@@ -966,38 +975,39 @@ html,body {
   background-size : cover;
 }
 .scene2 {
-  background: url('../img/bg2.jpg');
+  background: url('../img/bg2.png');
   background-size : cover;
 }
 .scene3 {
-  background: url('../img/bg3.jpg');
+  background: url('../img/bg3.png');
   background-size : cover;
   color : #FFF;
   text-shadow: -2px 2px rgba(30, 30, 30, 0.5);
 }
 .scene4 {
-  background: url('../img/bg4.jpg');
   text-shadow: -3px 3px rgba(255, 255, 255, 0.5);
-  background-size : cover;
   color: red;
 }
 .scene5 {
-  background: url('../img/bg5.jpg');
+  background: url('../img/bg5.png');
   text-shadow: -3px 3px -3px rgba(255, 255, 255, 0.5);
   background-size : cover;
 }
 .scene6 {
-  background: url('../img/bg6.png');
+  background: url('../img/bg4.png');
   background-size : cover;
 }
 .scene7 {
-  /*background: url('../img/bg1.png');*/
+  background: url('../img/bg1.png');
+  background-size : cover;
 }
 .scene8 {
-  /*background: url('../img/bg1.png');*/
+  background: url('../img/bg89.png');
+  background-size : cover;
 }
 .scene9 {
-  /*background: url('../img/bg1.png');*/
+  background: url('../img/bg89.png');
+  background-size : cover;
 }
 .scene10 {
   color : #222;
@@ -1020,6 +1030,15 @@ html,body {
 
 .mt20 {
   margin-top: 20px;
+}
+a {
+  text-decoration: none;
+}
+.skip {
+  position: fixed;
+  right: 10px;
+  top:10px;
+  text-align: right;
 }
 .center {
   position: absolute;
